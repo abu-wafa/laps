@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 class Cart extends Component {
     state={
         DataCart: window.localStorage.getItem("CartStorage") ? JSON.parse(window.localStorage.getItem("CartStorage")):[],
-        count:1
+        
     }
     handleDeleteItem= _index =>{
         console.log("before splice",this.state.DataCart)
@@ -57,7 +57,7 @@ class Cart extends Component {
                                             <Col lg={2}> 
                                                 <div class="qty">
                                                     <p>quantity</p>
-                                                    <input type="number" min="1" value={this.state.qnt_Value} onChange={(e)=>{this.setState({qnt_Value:e.target.value})}} style={{outline:"none"}}/>
+                                                    <input type="number" min="1"  style={{outline:"none"}}/>
                                                 </div>
                                             </Col>
                                             <Col lg={2}><p>{prodd.price}</p></Col>
